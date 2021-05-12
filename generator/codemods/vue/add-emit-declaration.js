@@ -20,7 +20,7 @@ module.exports = function addEmitDeclaration(context) {
 
   const emits = []
   for (let i = 0; i < this$emits.length; i++) {
-    const arg = this$emits.get(i).node.arguments[0]
+    const arg = this$emits.at(i).get().node.arguments[0]
     if (arg.type === 'StringLiteral') {
       emits.push(arg.value)
     }
